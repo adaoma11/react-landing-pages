@@ -1,11 +1,11 @@
-import * as Styled from "./styles";
+import * as Styled from './styles';
 
 function App() {
   return (
     <>
-      <Styled.Wraper>
+      <Styled.Container>
         <h1>Hello world</h1>
-      </Styled.Wraper>
+      </Styled.Container>
     </>
   );
 }

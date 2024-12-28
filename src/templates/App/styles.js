@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-export const Wraper = styled.div`
+export const Container = styled.div`
   ${() => css`
     display: flex;
     justify-content: center;
