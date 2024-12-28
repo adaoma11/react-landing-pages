@@ -1,14 +1,18 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
+import { renderTheme } from '../../styles/renderTheme';
+import { theme } from '../../styles/theme';
 import App from '.';
 
 describe('App', () => {
   it("should render 'hello world'", () => {
-    render(<App />);
+    renderTheme(<App />);
 
-    screen.debug();
+    const headingContainer = screen.getByRole('heading', {
+      name: /hello/i,
+    }).parentElement;
 
-    expect(
-      screen.getByRole('heading', { name: /hello world/i }),
-    ).toBeInTheDocument();
+    expect(headingContainer).toHaveStyle({ background: theme.colors.mainBg });
+    expect(headingContainer).toMatchSnapshot();
+    expect(headingContainer).toHaveStyleRule('justify-content', 'center');
   });
 });

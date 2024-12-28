@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  ${() => css`
+  ${({ theme }) => css`
+    color: ${theme.colors.primary};
     display: flex;
     justify-content: center;
     align-items: center;
