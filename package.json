@@ -8,7 +8,9 @@
     "build": "vite build",
     "test": "jest",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -20,7 +22,15 @@
     "@babel/eslint-parser": "^7.25.9",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.26.3",
+    "@chromatic-com/storybook": "^3.2.3",
     "@eslint/js": "^9.17.0",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
+    "@storybook/test": "^8.4.7",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
@@ -43,6 +53,8 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-styled-components": "^7.2.0",
     "prettier": "^3.4.2",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.4.7",
     "vite": "^6.0.5"
   }
 }
