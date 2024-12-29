@@ -21,6 +21,7 @@ export const Default = {
     as: 'h1',
     dark: false,
     size: 'xlarge',
+    upperCase: true,
   },
 };
 
@@ -30,6 +31,7 @@ export const Light = {
     as: 'h2',
     dark: false,
     size: 'large',
+    upperCase: false,
   },
 };
 
@@ -39,6 +41,7 @@ export const Dark = {
     as: 'h2',
     dark: true,
     size: 'large',
+    upperCase: false,
   },
   parameters: {
     backgrounds: {

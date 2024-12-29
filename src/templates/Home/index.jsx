@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       <Styled.Container>
-        <Heading dark={false} as="h1" size="xlarge">
+        <Heading dark={false} as="h1" size="xlarge" upperCase={false}>
           Hello Storybook!
         </Heading>
       </Styled.Container>

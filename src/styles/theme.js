@@ -18,4 +18,9 @@ export const theme = {
       xlarge: '3rem',
     },
   },
+  medias: {
+    small: '(max-width: 768px)',
+    medium: '(max-width: 991px)',
+    large: '(min-width: 992px)',
+  },
 };

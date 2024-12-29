@@ -6,10 +6,11 @@ export const Heading = ({
   children,
   dark = true,
   as = 'h1',
-  size = 'large',
+  size = 'xlarge',
+  upperCase = false,
 }) => {
   return (
-    <Styled.Title $dark={dark} as={as} size={size}>
+    <Styled.Title $dark={dark} as={as} size={size} $upperCase={upperCase}>
       {children}
     </Styled.Title>
   );
@@ -19,5 +20,6 @@ Heading.propTypes = {
   children: PropTypes.node.isRequired,
   dark: PropTypes.bool.isRequired,
   as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
-  size: PropTypes.oneOf(Object.keys(theme.fonts.sizes)),
+  size: PropTypes.oneOf(Object.keys(theme.fonts.sizes)).isRequired,
+  upperCase: PropTypes.bool.isRequired,
 };
