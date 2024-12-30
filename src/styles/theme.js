@@ -6,9 +6,9 @@ export const theme = {
   },
   fonts: {
     family: {
-      default: "'Poppins', sans-serif",
-      heading: "'Montserrat', sans-serif",
-      paragraph: "'Poppins', sans-serif",
+      default: "'Poppins',sans-serif",
+      heading: "'Montserrat',sans-serif",
+      paragraph: "'Poppins',sans-serif",
     },
     sizes: {
       xsmall: '0.8rem',
