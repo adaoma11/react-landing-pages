@@ -51,4 +51,9 @@ describe('<Heading />', () => {
     const heading = screen.getByRole('heading', { name: 'texto' });
     expect(heading.tagName.toLowerCase()).toBe('h6');
   });
+
+  it('should match snapshot', () => {
+    renderTheme(<Heading>texto</Heading>);
+    expect(screen.getByRole('heading', { name: 'texto' })).toMatchSnapshot();
+  });
 });
