@@ -13,6 +13,6 @@ export const Title = styled.h1`
       }
     `}
 
-    ${$upperCase && 'text-transform: uppercase'}
+    text-transform: ${$upperCase ? 'uppercase' : 'none'}
   `}
 `;

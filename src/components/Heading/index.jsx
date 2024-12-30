@@ -18,8 +18,8 @@ export const Heading = ({
 
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
-  dark: PropTypes.bool.isRequired,
-  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
-  size: PropTypes.oneOf(Object.keys(theme.fonts.sizes)).isRequired,
-  upperCase: PropTypes.bool.isRequired,
+  dark: PropTypes.bool,
+  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  size: PropTypes.oneOf(Object.keys(theme.fonts.sizes)),
+  upperCase: PropTypes.bool,
 };
