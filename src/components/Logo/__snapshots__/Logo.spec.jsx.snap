@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> should match snapshot 1`] = `
+.c0 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0A1128;
+  text-decoration: none;
+}
+
+.c0 >img {
+  max-height: 100px;
+}
+
+<a
+  class="c0"
+  href="#"
+>
+  <img
+    alt="texto"
+    src="image.png"
+  />
+</a>
+`;
