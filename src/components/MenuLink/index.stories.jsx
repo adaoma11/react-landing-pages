@@ -17,4 +17,9 @@ export const Default = {
     href: 'https://google.com/',
     newTab: true,
   },
+  parameters: {
+    backgrounds: {
+      default: 'light',
+    },
+  },
 };

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Link = styled.a`
   ${({ theme }) => css`
     display: block;
-    padding: 15px;
+    padding: 25px;
     font-family: ${theme.fonts.family.default};
     font-size: ${theme.fonts.sizes.small};
     color: ${theme.colors.primary};
@@ -15,7 +15,7 @@ export const Link = styled.a`
       position: absolute;
       background: ${theme.colors.secondary};
       left: 25%;
-      bottom: 0;
+      bottom: 0.75rem;
       width: 50%;
       height: 3px;
       transform: scale(0);
