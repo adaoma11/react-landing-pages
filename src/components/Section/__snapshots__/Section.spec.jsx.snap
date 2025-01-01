@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Section /> should match snapshot 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  color: #0A1128;
+  background-color: #FFFFFF;
+}
+
+.c0 .wrapper {
+  max-width: 1200px;
+  padding: 30px;
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <div
+      class="wrapper"
+    >
+      Children
+    </div>
+  </section>
+</div>
+`;

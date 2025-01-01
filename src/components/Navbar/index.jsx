@@ -15,7 +15,6 @@ export const Navbar = ({ links = [] }) => {
 Navbar.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
-      children: PropTypes.node.isRequired,
       href: PropTypes.string.isRequired,
       newTab: PropTypes.bool,
     }),
