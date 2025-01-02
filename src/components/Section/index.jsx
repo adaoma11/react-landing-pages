@@ -4,7 +4,7 @@ import * as Styled from './styles';
 export const Section = ({ children, hasBg = false }) => {
   return (
     <Styled.Container $hasBg={hasBg}>
-      <div className="wrapper">{children}</div>
+      <Styled.Article>{children}</Styled.Article>
     </Styled.Container>
   );
 };
