@@ -11,7 +11,7 @@ exports[`<Section /> should match snapshot 1`] = `
   background-color: #FFFFFF;
 }
 
-.c0 .wrapper {
+.c1 {
   max-width: 1200px;
   padding: 30px;
 }
@@ -20,11 +20,11 @@ exports[`<Section /> should match snapshot 1`] = `
   <section
     class="c0"
   >
-    <div
-      class="wrapper"
+    <article
+      class="c1"
     >
       Children
-    </div>
+    </article>
   </section>
 </div>
 `;

@@ -7,7 +7,7 @@ import {
 export const Nav = styled.nav`
   ${({ theme }) => css`
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -40,7 +40,7 @@ export const Nav = styled.nav`
 export const Menu = styled.menu`
   ${({ theme, $visible }) => css`
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     list-style: none;
     transition: ${$visible
       ? 'height 0.8s linear, opacity 1s linear 0.4s'

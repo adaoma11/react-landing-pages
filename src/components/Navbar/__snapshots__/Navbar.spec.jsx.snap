@@ -1,14 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Navbar /> should match snapshot 1`] = `
+.c4 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
 .c0 {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0 10px 0;
+  background-color: #FFFFFF;
 }
 
 .c1 {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  transition: height 0.5s linear;
+}
+
+.c3 {
+  display: none;
+  margin: 10px 10px 0 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.c5 {
+  width: 35px;
+  height: 35px;
+  color: #0A1128;
+}
+
+.c2 {
   display: block;
   padding: 25px;
   font-family: 'Poppins',sans-serif;
@@ -18,7 +52,7 @@ exports[`<Navbar /> should match snapshot 1`] = `
   position: relative;
 }
 
-.c1::after {
+.c2::after {
   content: '';
   position: absolute;
   background: #DC143C;
@@ -30,61 +64,116 @@ exports[`<Navbar /> should match snapshot 1`] = `
   transition: all 0.4s ease-in-out;
 }
 
-.c1:hover::after {
+.c2:hover::after {
   transform: scale(1);
+}
+
+@media (max-width: 1230px) {
+  .c0 {
+    padding: 0px 20px;
+  }
 }
 
 @media (max-width: 768px) {
   .c0 {
-    flex-flow: column wrap;
-    align-content: center;
+    align-items: start;
+    justify-content: space-around;
+  }
+
+  .c0 >button {
+    margin: 20px 0px 20px 0px;
+  }
+
+  .c0 >a>img {
+    margin: 15px 0px 15px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c1 {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .c3 {
+    display: block;
   }
 }
 
 <nav
   class="c0"
 >
-  <a
+  <menu
+    aria-label="main menu"
     class="c1"
-    href="#"
-    target="_self"
   >
-    Link 1
-  </a>
-  <a
-    class="c1"
-    href="#"
-    target="_self"
+    <li>
+      <a
+        class="c2"
+        href="#"
+        target="_self"
+      >
+        Link 1
+      </a>
+    </li>
+    <li>
+      <a
+        class="c2"
+        href="#"
+        target="_self"
+      >
+        Link 2
+      </a>
+    </li>
+    <li>
+      <a
+        class="c2"
+        href="#"
+        target="_self"
+      >
+        Link 3
+      </a>
+    </li>
+    <li>
+      <a
+        class="c2"
+        href="#"
+        target="_self"
+      >
+        Link 4
+      </a>
+    </li>
+    <li>
+      <a
+        class="c2"
+        href="#"
+        target="_self"
+      >
+        Link 5
+      </a>
+    </li>
+  </menu>
+  <button
+    aria-label="open menu"
+    class="c3"
   >
-    Link 2
-  </a>
-  <a
-    class="c1"
-    href="#"
-    target="_self"
-  >
-    Link 3
-  </a>
-  <a
-    class="c1"
-    href="#"
-    target="_self"
-  >
-    Link 4
-  </a>
-  <a
-    class="c1"
-    href="#"
-    target="_self"
-  >
-    Link 5
-  </a>
-  <a
-    class="c1"
-    href="#"
-    target="_self"
-  >
-    Link 6
-  </a>
+    <svg
+      aria-hidden="true"
+      class="c4 c5"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+      />
+    </svg>
+  </button>
 </nav>
 `;
