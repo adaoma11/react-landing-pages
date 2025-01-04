@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import * as Styled from './styles';
 
-export const Logo = ({ text, imgSrc, href = '#' }) => {
+export const Logo = ({ text, imgSrc, href }) => {
   if (imgSrc) {
     return (
       <Styled.Container href={href}>
@@ -16,5 +16,5 @@ export const Logo = ({ text, imgSrc, href = '#' }) => {
 Logo.propTypes = {
   text: PropTypes.string.isRequired,
   imgSrc: PropTypes.string,
-  href: PropTypes.string,
+  href: PropTypes.string.isRequired,
 };

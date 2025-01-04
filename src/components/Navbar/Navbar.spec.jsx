@@ -56,6 +56,23 @@ describe('<Navbar />', () => {
     });
   });
 
+  it('should close the menu when clicking on one of its links on small screens', () => {
+    renderTheme(<Navbar logoData={logoData} links={links} />);
+
+    const openBtn = screen.getByLabelText('open menu');
+    const menu = screen.getByLabelText('main menu');
+
+    fireEvent.click(openBtn);
+    expect(menu).toHaveStyleRule('opacity', '1', {
+      media: '(max-width:  768px)',
+    });
+
+    fireEvent.click(menu.firstChild);
+    expect(menu).toHaveStyleRule('opacity', '0', {
+      media: '(max-width:  768px)',
+    });
+  });
+
   it('should match snapshot', () => {
     renderTheme(<Navbar links={links} />);
     expect(screen.getByRole('navigation')).toMatchSnapshot();
