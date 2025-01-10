@@ -8,9 +8,16 @@ export const Heading = ({
   as = 'h1',
   size = 'xlarge',
   upperCase = false,
+  align,
 }) => {
   return (
-    <Styled.Title $dark={dark} as={as} size={size} $upperCase={upperCase}>
+    <Styled.Title
+      $dark={dark}
+      as={as}
+      size={size}
+      $upperCase={upperCase}
+      $align={align}
+    >
       {children}
     </Styled.Title>
   );
@@ -22,4 +29,5 @@ Heading.propTypes = {
   as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   size: PropTypes.oneOf(Object.keys(theme.fonts.sizes)),
   upperCase: PropTypes.bool,
+  align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
 };
