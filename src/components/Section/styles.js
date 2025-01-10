@@ -7,7 +7,6 @@ export const Container = styled.section`
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    color: ${$hasBg ? theme.colors.white : theme.colors.primary};
     background-color: ${$hasBg ? theme.colors.primary : theme.colors.white};
   `}
 `;

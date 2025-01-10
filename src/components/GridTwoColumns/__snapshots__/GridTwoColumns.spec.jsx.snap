@@ -29,7 +29,6 @@ exports[`<GridTwoColumns /> should match snapshot 1`] = `
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  color: #0A1128;
   background-color: #FFFFFF;
 }
 
