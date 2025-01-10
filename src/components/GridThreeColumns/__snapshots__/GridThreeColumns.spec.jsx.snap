@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridThreeColumns /> should match snapshot 1`] = `
+.c3 {
+  color: #0A1128;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.c7 {
+  color: #0A1128;
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.c5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  counter-reset: grid-counter;
+  width: 100%;
+  gap: 50px;
+}
+
+.c6 {
+  margin-top: 80px;
+}
+
+.c6 .c2 {
+  position: relative;
+  left: 4rem;
+  margin-bottom: 30px;
+}
+
+.c6 .c2::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: 5rem;
+  top: -2rem;
+  left: -4rem;
+  transform: rotate(7deg);
+}
+
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+}
+
+.c1 {
+  max-width: 1200px;
+  padding: 30px;
+}
+
+.c4 {
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.5rem;
+  color: #0A1128;
+  text-align: center;
+  font-weight: normal;
+}
+
+.c8 {
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.5rem;
+  color: #0A1128;
+  text-align: justify;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .c3 {
+    font-size: 2rem;
+  }
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <article
+      class="c1"
+    >
+      <h2
+        class="c2 c3"
+      >
+        Titulo principal
+      </h2>
+      <p
+        class="c4"
+      >
+        Uma breve descrição desta seção...
+      </p>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+        >
+          <h3
+            class="c2 c7"
+          >
+            Primeiro titulo
+          </h3>
+          <p
+            class="c8"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos ipsum minima consequatur explicabo doloribus quisquam quaerat, fugit consectetur corrupti deserunt enim magnam sunt repellat fugiat delectus perferendis tempore vel!
+          </p>
+        </div>
+        <div
+          class="c6"
+        >
+          <h3
+            class="c2 c7"
+          >
+            Segundo titulo
+          </h3>
+          <p
+            class="c8"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos ipsum minima consequatur explicabo doloribus quisquam quaerat, fugit consectetur corrupti deserunt enim magnam sunt repellat fugiat delectus perferendis tempore vel!
+          </p>
+        </div>
+        <div
+          class="c6"
+        >
+          <h3
+            class="c2 c7"
+          >
+            Terceiro titulo
+          </h3>
+          <p
+            class="c8"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos ipsum minima consequatur explicabo doloribus quisquam quaerat, fugit consectetur corrupti deserunt enim magnam sunt repellat fugiat delectus perferendis tempore vel!
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
+</div>
+`;
