@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridTwoColumns /> should match snapshot 1`] = `
+.c2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.c3 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.c6 {
+  display: block;
+  min-height: 500px;
+  background-image: url(vite.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  color: #0A1128;
+  background-color: #FFFFFF;
+}
+
+.c1 {
+  max-width: 1200px;
+  padding: 30px;
+}
+
+.c4 {
+  color: #0A1128;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.c5 {
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.5rem;
+  color: #0A1128;
+  text-align: justify;
+  font-weight: normal;
+}
+
+@media (max-width: 991px) {
+  .c2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .c4 {
+    font-size: 2rem;
+  }
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <article
+      class="c1"
+    >
+      <div
+        class="c2"
+        data-testid="container"
+      >
+        <div
+          class="c3"
+        >
+          <h2
+            class="c4"
+          >
+            Grid Two Columns
+          </h2>
+          <p
+            class="c5"
+          >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia iusto omnis magnam libero ea neque deserunt optio aliquam, quas esse fugit nulla, quaerat tempora repellat? Cupiditate voluptatum sint suscipit facilis.
+          </p>
+        </div>
+        <div
+          aria-label="Grid Two Columns"
+          class="c6"
+          role="img"
+        />
+      </div>
+    </article>
+  </section>
+</div>
+`;

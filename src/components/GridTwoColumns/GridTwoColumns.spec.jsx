@@ -55,6 +55,7 @@ describe('<GridTwoColumns />', () => {
   });
 
   it('should match snapshot', () => {
-    //
+    const { container } = renderTheme(<GridTwoColumns {...mock} />);
+    expect(container).toMatchSnapshot();
   });
 });
