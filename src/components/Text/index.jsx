@@ -17,7 +17,7 @@ export const Text = ({
 };
 
 Text.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.string.isRequired,
   size: PropTypes.oneOf(Object.keys(theme.fonts.sizes)),
   dark: PropTypes.bool,
   bold: PropTypes.bool,
