@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridImages /> should match snapshot 1`] = `
+.c4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  width: 100%;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.c5 {
+  overflow: hidden;
+}
+
+.c6 {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.c6:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+}
+
+.c1 {
+  max-width: 1200px;
+  width: 100%;
+  padding: 30px;
+}
+
+.c2 {
+  color: #0A1128;
+  font-size: 3rem;
+  text-transform: none;
+}
+
+.c3 {
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.5rem;
+  color: #0A1128;
+  text-align: left;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .c2 {
+    font-size: 2rem;
+  }
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <article
+      class="c1"
+    >
+      <h2
+        class="c2"
+      >
+        Grid Images Example
+      </h2>
+      <p
+        class="c3"
+      >
+        Uma breve descrição sobre este album
+      </p>
+      <div
+        class="c4"
+      >
+        <div
+          class="c5"
+        >
+          <img
+            alt="Imagem 1"
+            class="c6"
+            src="https://picsum.photos/300?random=1"
+          />
+        </div>
+        <div
+          class="c5"
+        >
+          <img
+            alt="Imagem 2"
+            class="c6"
+            src="https://picsum.photos/300?random=2"
+          />
+        </div>
+        <div
+          class="c5"
+        >
+          <img
+            alt="Imagem 3"
+            class="c6"
+            src="https://picsum.photos/300?random=3"
+          />
+        </div>
+        <div
+          class="c5"
+        >
+          <img
+            alt="Imagem 4"
+            class="c6"
+            src="https://picsum.photos/300?random=4"
+          />
+        </div>
+        <div
+          class="c5"
+        >
+          <img
+            alt="Imagem 5"
+            class="c6"
+            src="https://picsum.photos/300?random=5"
+          />
+        </div>
+        <div
+          class="c5"
+        >
+          <img
+            alt="Imagem 6"
+            class="c6"
+            src="https://picsum.photos/300?random=6"
+          />
+        </div>
+      </div>
+    </article>
+  </section>
+</div>
+`;
