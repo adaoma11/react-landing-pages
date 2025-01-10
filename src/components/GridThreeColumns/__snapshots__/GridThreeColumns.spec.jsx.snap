@@ -53,6 +53,7 @@ exports[`<GridThreeColumns /> should match snapshot 1`] = `
 
 .c1 {
   max-width: 1200px;
+  width: 100%;
   padding: 30px;
 }
 

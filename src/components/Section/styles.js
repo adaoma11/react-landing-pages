@@ -13,5 +13,6 @@ export const Container = styled.section`
 
 export const Article = styled.article`
   max-width: 1200px;
+  width: 100%;
   padding: 30px;
 `;
