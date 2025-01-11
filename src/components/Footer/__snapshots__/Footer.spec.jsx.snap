@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should match snapshot 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  background-color: #FFFFFF;
+}
+
+.c1 {
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.5rem;
+  color: #0A1128;
+  text-align: left;
+  font-weight: normal;
+}
+
+<div>
+  <footer
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      Teste
+    </p>
+  </footer>
+</div>
+`;
