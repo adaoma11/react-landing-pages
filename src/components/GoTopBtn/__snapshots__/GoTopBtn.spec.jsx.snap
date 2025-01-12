@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GoTopBtn /> should match snapshot 1`] = `
+.c1 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c0 {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  color: #FFFFFF;
+  background-color: #0A1128;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+<div>
+  <a
+    aria-label="Voltar ao topo"
+    class="c0"
+    href="#"
+    title="Voltar ao topo"
+  >
+    <svg
+      aria-hidden="true"
+      class="c1"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
+      />
+    </svg>
+  </a>
+</div>
+`;
