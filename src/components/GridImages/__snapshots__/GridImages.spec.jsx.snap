@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<GridImages /> should match snapshot 1`] = `
-.c4 {
+.c5 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   width: 100%;
@@ -9,16 +9,16 @@ exports[`<GridImages /> should match snapshot 1`] = `
   margin-top: 50px;
 }
 
-.c5 {
+.c6 {
   overflow: hidden;
 }
 
-.c6 {
+.c7 {
   width: 100%;
   transition: all 0.5s ease-in-out;
 }
 
-.c6:hover {
+.c7:hover {
   transform: scale(1.2) rotate(5deg);
 }
 
@@ -28,6 +28,7 @@ exports[`<GridImages /> should match snapshot 1`] = `
   justify-content: center;
   width: 100%;
   min-height: 100vh;
+  padding: 50px 0;
   background-color: #FFFFFF;
 }
 
@@ -38,12 +39,17 @@ exports[`<GridImages /> should match snapshot 1`] = `
 }
 
 .c2 {
-  color: #0A1128;
-  font-size: 3rem;
-  text-transform: none;
+  margin-bottom: 30px;
 }
 
 .c3 {
+  color: #0A1128;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: none;
+}
+
+.c4 {
   font-family: 'Poppins',sans-serif;
   font-size: 1.5rem;
   color: #0A1128;
@@ -52,7 +58,7 @@ exports[`<GridImages /> should match snapshot 1`] = `
 }
 
 @media (max-width: 768px) {
-  .c2 {
+  .c3 {
     font-size: 2rem;
   }
 }
@@ -64,70 +70,74 @@ exports[`<GridImages /> should match snapshot 1`] = `
     <article
       class="c1"
     >
-      <h2
+      <header
         class="c2"
       >
-        Grid Images Example
-      </h2>
-      <p
-        class="c3"
-      >
-        Uma breve descrição sobre este album
-      </p>
+        <h2
+          class="c3"
+        >
+          Grid Images Example
+        </h2>
+        <p
+          class="c4"
+        >
+          Uma breve descrição sobre este album
+        </p>
+      </header>
       <div
-        class="c4"
+        class="c5"
       >
         <div
-          class="c5"
+          class="c6"
         >
           <img
             alt="Imagem 1"
-            class="c6"
+            class="c7"
             src="https://picsum.photos/300?random=1"
           />
         </div>
         <div
-          class="c5"
+          class="c6"
         >
           <img
             alt="Imagem 2"
-            class="c6"
+            class="c7"
             src="https://picsum.photos/300?random=2"
           />
         </div>
         <div
-          class="c5"
+          class="c6"
         >
           <img
             alt="Imagem 3"
-            class="c6"
+            class="c7"
             src="https://picsum.photos/300?random=3"
           />
         </div>
         <div
-          class="c5"
+          class="c6"
         >
           <img
             alt="Imagem 4"
-            class="c6"
+            class="c7"
             src="https://picsum.photos/300?random=4"
           />
         </div>
         <div
-          class="c5"
+          class="c6"
         >
           <img
             alt="Imagem 5"
-            class="c6"
+            class="c7"
             src="https://picsum.photos/300?random=5"
           />
         </div>
         <div
-          class="c5"
+          class="c6"
         >
           <img
             alt="Imagem 6"
-            class="c6"
+            class="c7"
             src="https://picsum.photos/300?random=6"
           />
         </div>

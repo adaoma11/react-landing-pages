@@ -16,9 +16,13 @@ export const GridTwoColumns = ({
     <Section hasBg={hasBg}>
       <Styled.Container data-testid="container">
         <Styled.TextContainer>
-          <Heading as="h2" upperCase={titleUpperCase} dark={!hasBg}>
-            {title}
-          </Heading>
+          <Heading
+            as="h2"
+            upperCase={titleUpperCase}
+            dark={!hasBg}
+            title={title}
+          />
+
           <Text align={textAlign} dark={!hasBg}>
             {text}
           </Text>

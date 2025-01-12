@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import * as Styled from './styles';
 import { Section } from '../Section';
 import { Heading } from '../Heading';
-import { Text } from '../Text';
 
 export const GridThreeColumns = ({
   title,
@@ -13,21 +12,25 @@ export const GridThreeColumns = ({
 }) => {
   return (
     <Section hasBg={hasBg}>
-      <Heading as="h2" upperCase={titleUpperCase} dark={!hasBg} align="center">
-        {title}
-      </Heading>
-      <Text dark={!hasBg} align="center">
-        {description}
-      </Text>
+      <Heading
+        as="h2"
+        upperCase={titleUpperCase}
+        dark={!hasBg}
+        align="center"
+        title={title}
+        subtitle={description}
+      />
+
       <Styled.GridContainer>
         {gridItems.map((item, index) => (
           <Styled.GridItem key={index}>
-            <Heading as="h3" size="large" dark={!hasBg}>
-              {item.title}
-            </Heading>
-            <Text dark={!hasBg} align="justify">
-              {item.text}
-            </Text>
+            <Heading
+              as="h3"
+              size="large"
+              dark={!hasBg}
+              title={item.title}
+              subtitle={item.text}
+            />
           </Styled.GridItem>
         ))}
       </Styled.GridContainer>

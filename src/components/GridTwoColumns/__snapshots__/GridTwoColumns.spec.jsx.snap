@@ -14,7 +14,7 @@ exports[`<GridTwoColumns /> should match snapshot 1`] = `
   gap: 30px;
 }
 
-.c6 {
+.c7 {
   display: block;
   min-height: 500px;
   background-image: url(vite.svg);
@@ -29,6 +29,7 @@ exports[`<GridTwoColumns /> should match snapshot 1`] = `
   justify-content: center;
   width: 100%;
   min-height: 100vh;
+  padding: 50px 0;
   background-color: #FFFFFF;
 }
 
@@ -39,12 +40,17 @@ exports[`<GridTwoColumns /> should match snapshot 1`] = `
 }
 
 .c4 {
-  color: #0A1128;
-  font-size: 3rem;
-  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .c5 {
+  color: #0A1128;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.c6 {
   font-family: 'Poppins',sans-serif;
   font-size: 1.5rem;
   color: #0A1128;
@@ -59,7 +65,7 @@ exports[`<GridTwoColumns /> should match snapshot 1`] = `
 }
 
 @media (max-width: 768px) {
-  .c4 {
+  .c5 {
     font-size: 2rem;
   }
 }
@@ -78,20 +84,24 @@ exports[`<GridTwoColumns /> should match snapshot 1`] = `
         <div
           class="c3"
         >
-          <h2
+          <header
             class="c4"
           >
-            Grid Two Columns
-          </h2>
+            <h2
+              class="c5"
+            >
+              Grid Two Columns
+            </h2>
+          </header>
           <p
-            class="c5"
+            class="c6"
           >
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia iusto omnis magnam libero ea neque deserunt optio aliquam, quas esse fugit nulla, quaerat tempora repellat? Cupiditate voluptatum sint suscipit facilis.
           </p>
         </div>
         <div
           aria-label="Grid Two Columns"
-          class="c6"
+          class="c7"
           role="img"
         />
       </div>

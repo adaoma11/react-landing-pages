@@ -10,7 +10,6 @@ export const Nav = styled.nav`
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
     top: 0;
     width: 100%;
     max-width: 1200px;

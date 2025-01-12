@@ -13,6 +13,7 @@ exports[`<GridContent /> should match snapshot 1`] = `
   justify-content: center;
   width: 100%;
   min-height: 100vh;
+  padding: 50px 0;
   background-color: #FFFFFF;
 }
 
@@ -23,12 +24,17 @@ exports[`<GridContent /> should match snapshot 1`] = `
 }
 
 .c3 {
-  color: #0A1128;
-  font-size: 3rem;
-  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .c4 {
+  color: #0A1128;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.c5 {
   font-family: 'Poppins',sans-serif;
   font-size: 1.5rem;
   color: #0A1128;
@@ -37,7 +43,7 @@ exports[`<GridContent /> should match snapshot 1`] = `
 }
 
 @media (max-width: 768px) {
-  .c3 {
+  .c4 {
     font-size: 2rem;
   }
 }
@@ -52,13 +58,17 @@ exports[`<GridContent /> should match snapshot 1`] = `
       <div
         class="c2"
       >
-        <h2
+        <header
           class="c3"
         >
-          Grid Component Example
-        </h2>
+          <h2
+            class="c4"
+          >
+            Grid Component Example
+          </h2>
+        </header>
         <p
-          class="c4"
+          class="c5"
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate minus repellendus fugiat aliquam neque corporis! Quidem, deserunt! Rem quod quo amet doloremque, excepturi doloribus, provident nesciunt blanditiis consequuntur facere quia!
         </p>

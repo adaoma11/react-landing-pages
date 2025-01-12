@@ -1,20 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<GridThreeColumns /> should match snapshot 1`] = `
-.c3 {
+.c2 {
+  margin-bottom: 30px;
+}
+
+.c4 {
   color: #0A1128;
   font-size: 3rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
 }
 
-.c7 {
+.c8 {
   color: #0A1128;
   font-size: 2rem;
+  margin-bottom: 1rem;
   text-transform: none;
 }
 
-.c5 {
+.c6 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   counter-reset: grid-counter;
@@ -22,17 +28,17 @@ exports[`<GridThreeColumns /> should match snapshot 1`] = `
   gap: 50px;
 }
 
-.c6 {
+.c7 {
   margin-top: 80px;
 }
 
-.c6 .c2 {
+.c7 .c3 {
   position: relative;
   left: 4rem;
   margin-bottom: 30px;
 }
 
-.c6 .c2::before {
+.c7 .c3::before {
   counter-increment: grid-counter;
   content: counter(grid-counter);
   position: absolute;
@@ -48,6 +54,7 @@ exports[`<GridThreeColumns /> should match snapshot 1`] = `
   justify-content: center;
   width: 100%;
   min-height: 100vh;
+  padding: 50px 0;
   background-color: #FFFFFF;
 }
 
@@ -57,7 +64,7 @@ exports[`<GridThreeColumns /> should match snapshot 1`] = `
   padding: 30px;
 }
 
-.c4 {
+.c5 {
   font-family: 'Poppins',sans-serif;
   font-size: 1.5rem;
   color: #0A1128;
@@ -65,16 +72,16 @@ exports[`<GridThreeColumns /> should match snapshot 1`] = `
   font-weight: normal;
 }
 
-.c8 {
+.c9 {
   font-family: 'Poppins',sans-serif;
   font-size: 1.5rem;
   color: #0A1128;
-  text-align: justify;
+  text-align: left;
   font-weight: normal;
 }
 
 @media (max-width: 768px) {
-  .c3 {
+  .c4 {
     font-size: 2rem;
   }
 }
@@ -86,60 +93,76 @@ exports[`<GridThreeColumns /> should match snapshot 1`] = `
     <article
       class="c1"
     >
-      <h2
-        class="c2 c3"
+      <header
+        class="c2"
       >
-        Titulo principal
-      </h2>
-      <p
-        class="c4"
-      >
-        Uma breve descrição desta seção...
-      </p>
+        <h2
+          class="c3 c4"
+        >
+          Titulo principal
+        </h2>
+        <p
+          class="c5"
+        >
+          Uma breve descrição desta seção...
+        </p>
+      </header>
       <div
-        class="c5"
+        class="c6"
       >
         <div
-          class="c6"
+          class="c7"
         >
-          <h3
-            class="c2 c7"
+          <header
+            class="c2"
           >
-            Primeiro titulo
-          </h3>
-          <p
-            class="c8"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos ipsum minima consequatur explicabo doloribus quisquam quaerat, fugit consectetur corrupti deserunt enim magnam sunt repellat fugiat delectus perferendis tempore vel!
-          </p>
+            <h3
+              class="c3 c8"
+            >
+              Primeiro titulo
+            </h3>
+            <p
+              class="c9"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos ipsum minima consequatur explicabo doloribus quisquam quaerat, fugit consectetur corrupti deserunt enim magnam sunt repellat fugiat delectus perferendis tempore vel!
+            </p>
+          </header>
         </div>
         <div
-          class="c6"
+          class="c7"
         >
-          <h3
-            class="c2 c7"
+          <header
+            class="c2"
           >
-            Segundo titulo
-          </h3>
-          <p
-            class="c8"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos ipsum minima consequatur explicabo doloribus quisquam quaerat, fugit consectetur corrupti deserunt enim magnam sunt repellat fugiat delectus perferendis tempore vel!
-          </p>
+            <h3
+              class="c3 c8"
+            >
+              Segundo titulo
+            </h3>
+            <p
+              class="c9"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos ipsum minima consequatur explicabo doloribus quisquam quaerat, fugit consectetur corrupti deserunt enim magnam sunt repellat fugiat delectus perferendis tempore vel!
+            </p>
+          </header>
         </div>
         <div
-          class="c6"
+          class="c7"
         >
-          <h3
-            class="c2 c7"
+          <header
+            class="c2"
           >
-            Terceiro titulo
-          </h3>
-          <p
-            class="c8"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos ipsum minima consequatur explicabo doloribus quisquam quaerat, fugit consectetur corrupti deserunt enim magnam sunt repellat fugiat delectus perferendis tempore vel!
-          </p>
+            <h3
+              class="c3 c8"
+            >
+              Terceiro titulo
+            </h3>
+            <p
+              class="c9"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos ipsum minima consequatur explicabo doloribus quisquam quaerat, fugit consectetur corrupti deserunt enim magnam sunt repellat fugiat delectus perferendis tempore vel!
+            </p>
+          </header>
         </div>
       </div>
     </article>

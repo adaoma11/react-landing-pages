@@ -14,9 +14,12 @@ export const GridContent = ({
   return (
     <Section hasBg={hasBg}>
       <Styled.Container>
-        <Heading as="h2" upperCase={titleUpperCase} dark={!hasBg}>
-          {title}
-        </Heading>
+        <Heading
+          as="h2"
+          upperCase={titleUpperCase}
+          dark={!hasBg}
+          title={title}
+        />
         <Text align={textAlign} dark={!hasBg}>
           {text}
         </Text>
