@@ -2,7 +2,13 @@ import PropTypes from 'prop-types';
 import * as Styled from './styles';
 import { Text } from '../Text';
 
-export const Footer = ({ children, size, bold, align, hasBg }) => {
+export const Footer = ({
+  children,
+  size = 'small',
+  bold = true,
+  align = 'center',
+  hasBg,
+}) => {
   return (
     <Styled.Footer $hasBg={hasBg}>
       <Text size={size} dark={!hasBg} bold={bold} align={align}>
