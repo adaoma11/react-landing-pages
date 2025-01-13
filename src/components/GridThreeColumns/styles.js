@@ -3,7 +3,7 @@ import { Title as GridItemTitle } from '../Heading/styles';
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   counter-reset: grid-counter;
   width: 100%;
   gap: 50px;
@@ -15,6 +15,7 @@ export const GridItem = styled.div`
   ${GridItemTitle} {
     position: relative;
     left: 4rem;
+    max-width: 85%;
     margin-bottom: 30px;
   }
 
