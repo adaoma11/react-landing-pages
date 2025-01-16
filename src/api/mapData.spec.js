@@ -1,26 +1,69 @@
-import { mapPage } from './mapData';
+import { mapPage, mapHeader } from './mapData';
+import { data } from './data.json';
 
+// mapPage
 describe('mapPage', () => {
-  const pageMock = {
-    data: {
-      title: 'Titulo de teste',
-      slug: 'titulo-de-teste',
-      footer_text: 'Footer de teste',
-    },
-  };
-
   it('should run with no errors when there is no data', () => {
     const pageData = mapPage();
 
     expect(pageData).toEqual({
       title: '',
       slug: '',
-      footer_text: '',
+      footerText: '',
     });
   });
 
   it('should map proper data', () => {
-    const pageData = mapPage(pageMock);
-    expect(pageData).toEqual(pageMock.data);
+    const pageData = mapPage(data);
+
+    expect(pageData).toEqual({
+      title: data.title,
+      slug: data.slug,
+      footerText: data.footer_text,
+    });
+  });
+});
+
+// mapHeader
+describe('mapHeader', () => {
+  it('should run with no errors when there is no data', () => {
+    const headerData = mapHeader();
+
+    expect(headerData).toEqual({
+      logoData: {
+        text: '',
+        imgSrc: '',
+        href: '',
+      },
+      links: [],
+    });
+  });
+
+  it('should return default values when the object in links array is empty', () => {
+    const headerLinks = mapHeader({ header: { menu_links: [{}] } });
+    expect(headerLinks.links).toEqual([
+      {
+        children: '',
+        href: '',
+        newTab: false,
+      },
+    ]);
+  });
+
+  it('should map proper data', () => {
+    const headerData = mapHeader(data);
+
+    const links = data.header.menu_links.map((link) => {
+      return { children: link.text, href: link.href, newTab: link.new_tab };
+    });
+
+    expect(headerData).toEqual({
+      logoData: {
+        text: data.header.logo.image.alternativeText,
+        imgSrc: data.header.logo.image.url,
+        href: data.header.logo.href,
+      },
+      links,
+    });
   });
 });
