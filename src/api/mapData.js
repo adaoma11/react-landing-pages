@@ -1,16 +1,19 @@
 export const mapPage = (data = {}) => {
   const { title = '', slug = '', footer_text: footerText = '' } = data;
+  const { logoData, links } = mapHeader(data.header);
+  const sections = mapSections(data.sections);
 
   return {
     title,
     slug,
+    logoData,
+    links,
     footerText,
+    sections,
   };
 };
 
-export const mapHeader = (data = {}) => {
-  const header = data.header || {};
-
+const mapHeader = (header = {}) => {
   const logoData = {
     text: header.logo?.image?.alternativeText || '',
     imgSrc: header.logo?.image?.url || '',
@@ -26,4 +29,32 @@ export const mapHeader = (data = {}) => {
     : [];
 
   return { logoData, links };
+};
+
+const mapSections = (sections) => {
+  const sectionsList = Array.isArray(sections)
+    ? sections.map((section) => {
+        return mapSection(section);
+      })
+    : [];
+  return sectionsList;
+};
+
+const mapSection = (section) => {
+  const sectionHandlers = {
+    default: () => {
+      return {
+        component: '',
+        title: '',
+        text: '',
+        textAlign: '',
+        hasBg: '',
+        titleUpperCase: '',
+      };
+    },
+  };
+
+  const handler =
+    sectionHandlers[section.__component] || sectionHandlers.default;
+  return handler(section);
 };
