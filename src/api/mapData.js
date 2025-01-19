@@ -42,6 +42,18 @@ const mapSections = (sections) => {
 
 const mapSection = (section) => {
   const sectionHandlers = {
+    'section.grid-two-columns': (section) => {
+      return {
+        component: 'GridTwoColumns',
+        title: section.title ?? '',
+        text: section.text ?? '',
+        textAlign: section.align ?? '',
+        imgSrc: section.image?.url ?? '',
+        hasBg: section.metadata?.hasBg ?? false,
+        titleUpperCase: section.metadata?.titleUpperCase ?? true,
+      };
+    },
+
     default: () => {
       return {
         component: '',
