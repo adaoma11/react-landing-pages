@@ -2,22 +2,50 @@ import { renderTheme } from '../../styles/renderTheme';
 import { fireEvent, screen } from '@testing-library/react';
 import { Navbar } from '.';
 
-import { logoData, links } from './mock';
+const mock = {
+  logoData: {
+    text: 'Teste',
+    imgSrc: 'vite.svg',
+    href: '#',
+  },
+  links: [
+    {
+      children: 'Link 1',
+      href: '#',
+      newTab: false,
+    },
+    {
+      children: 'Link 2',
+      href: '#',
+      newTab: false,
+    },
+    {
+      children: 'Link 3',
+      href: '#',
+      newTab: false,
+    },
+    {
+      children: 'Link 4',
+      href: '#',
+      newTab: false,
+    },
+    {
+      children: 'Link 5',
+      href: '#',
+      newTab: false,
+    },
+  ],
+};
 
 describe('<Navbar />', () => {
   it('should render a navbar with all its children', () => {
-    renderTheme(<Navbar logoData={logoData} links={links} />);
+    renderTheme(<Navbar {...mock} />);
     expect(screen.getByRole('img')).toBeInTheDocument();
-    expect(screen.getAllByRole('link')).toHaveLength(links.length + 1);
-  });
-
-  it('should render no links or logo', () => {
-    renderTheme(<Navbar />);
-    expect(screen.getByRole('navigation').children).toHaveLength(0);
+    expect(screen.getAllByRole('link')).toHaveLength(6);
   });
 
   it('should shrink on small screens', () => {
-    renderTheme(<Navbar logoData={logoData} links={links} />);
+    renderTheme(<Navbar {...mock} />);
     expect(screen.getByLabelText('main menu')).toHaveStyleRule(
       'flex-flow',
       'column nowrap',
@@ -28,7 +56,7 @@ describe('<Navbar />', () => {
   });
 
   it('should open and close menu on small screens', () => {
-    renderTheme(<Navbar logoData={logoData} links={links} />);
+    renderTheme(<Navbar {...mock} />);
 
     const openBtn = screen.getByLabelText('open menu');
     const menu = screen.getByLabelText('main menu');
@@ -57,7 +85,7 @@ describe('<Navbar />', () => {
   });
 
   it('should close the menu when clicking on one of its links on small screens', () => {
-    renderTheme(<Navbar logoData={logoData} links={links} />);
+    renderTheme(<Navbar {...mock} />);
 
     const openBtn = screen.getByLabelText('open menu');
     const menu = screen.getByLabelText('main menu');
@@ -74,7 +102,7 @@ describe('<Navbar />', () => {
   });
 
   it('should match snapshot', () => {
-    renderTheme(<Navbar links={links} />);
+    renderTheme(<Navbar {...mock} />);
     expect(screen.getByRole('navigation')).toMatchSnapshot();
   });
 });

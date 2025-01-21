@@ -47,13 +47,14 @@ exports[`<GridImages /> should match snapshot 1`] = `
   font-size: 3rem;
   margin-bottom: 1rem;
   text-transform: none;
+  text-align: center;
 }
 
 .c4 {
   font-family: 'Poppins',sans-serif;
   font-size: 1.5rem;
   color: #0A1128;
-  text-align: left;
+  text-align: center;
   font-weight: normal;
 }
 

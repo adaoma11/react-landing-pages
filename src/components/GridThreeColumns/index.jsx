@@ -23,8 +23,8 @@ export const GridThreeColumns = ({
       />
 
       <Styled.GridContainer>
-        {gridItems.map((item, index) => (
-          <Styled.GridItem key={index}>
+        {gridItems.map((item) => (
+          <Styled.GridItem key={item.id}>
             <Heading as="h3" size="large" dark={!hasBg} title={item.title} />
             <Text dark={!hasBg} align="justify">
               {item.text}

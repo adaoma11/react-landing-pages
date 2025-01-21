@@ -17,11 +17,12 @@ export const GridImages = ({
         upperCase={titleUpperCase}
         dark={!hasBg}
         title={title}
+        align="center"
         subtitle={description}
       />
       <Styled.GridContainer>
-        {gridItems.map((img, index) => (
-          <Styled.GridItem key={index}>
+        {gridItems.map((img) => (
+          <Styled.GridItem key={img.id}>
             <Styled.Image alt={img.altText} src={img.imgSrc} />
           </Styled.GridItem>
         ))}
