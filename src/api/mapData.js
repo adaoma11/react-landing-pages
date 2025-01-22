@@ -42,15 +42,26 @@ const mapSections = (sections) => {
 
 const mapSection = (section) => {
   const sectionHandlers = {
+    'section.grid-content': (section) => {
+      return {
+        component: 'GridContent',
+        title: section.title ?? '',
+        text: section.text ?? '',
+        hasBg: section.metadata.hasBg ?? false,
+        titleUpperCase: section.metadata.titleUpperCase ?? true,
+        textAlign: section.metadata?.textAlign ?? '',
+      };
+    },
+
     'section.grid-two-columns': (section) => {
       return {
         component: 'GridTwoColumns',
         title: section.title ?? '',
         text: section.text ?? '',
-        textAlign: section.align ?? '',
         imgSrc: section.image?.url ?? '',
         hasBg: section.metadata?.hasBg ?? false,
         titleUpperCase: section.metadata?.titleUpperCase ?? true,
+        textAlign: section.metadata?.textAlign ?? '',
       };
     },
 
@@ -59,9 +70,9 @@ const mapSection = (section) => {
         component: '',
         title: '',
         text: '',
-        textAlign: '',
         hasBg: '',
         titleUpperCase: '',
+        textAlign: '',
       };
     },
   };

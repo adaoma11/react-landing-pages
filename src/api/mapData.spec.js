@@ -35,12 +35,25 @@ describe('mapPage', () => {
       },
       sections: [
         {
+          __component: 'section.grid-content',
+          title: 'Grid Content',
+          text: 'Some text here',
+          metadata: {
+            hasBg: true,
+            titleUpperCase: false,
+            textAlign: 'justify',
+          },
+        },
+        {
           __component: 'section.grid-two-columns',
           title: 'Grid Two Columns',
           text: 'Some text here',
-          align: 'left',
           image: { url: '/image.png' },
-          metadata: { hasBg: true, titleUpperCase: false },
+          metadata: {
+            hasBg: true,
+            titleUpperCase: false,
+            textAlign: 'justify',
+          },
         },
       ],
     };
@@ -62,13 +75,21 @@ describe('mapPage', () => {
       ],
       sections: [
         {
+          component: 'GridContent',
+          title: 'Grid Content',
+          text: 'Some text here',
+          hasBg: true,
+          titleUpperCase: false,
+          textAlign: 'justify',
+        },
+        {
           component: 'GridTwoColumns',
           title: 'Grid Two Columns',
           text: 'Some text here',
-          textAlign: 'left',
           imgSrc: '/image.png',
           hasBg: true,
           titleUpperCase: false,
+          textAlign: 'justify',
         },
       ],
     });

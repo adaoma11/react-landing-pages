@@ -1,58 +1,58 @@
 {
   "data": {
-    "id": 17,
+    "id": 19,
     "documentId": "paywfsq0vd3ecs2j7575ks3y",
     "title": "New Page",
     "slug": "new-page",
     "footer_text": "Powered by Strapi",
     "createdAt": "2025-01-15T01:29:36.104Z",
-    "updatedAt": "2025-01-15T02:52:08.620Z",
-    "publishedAt": "2025-01-15T02:52:08.666Z",
+    "updatedAt": "2025-01-25T03:31:01.360Z",
+    "publishedAt": "2025-01-25T03:31:01.413Z",
     "header": {
-      "id": 17,
+      "id": 19,
       "menu_links": [
         {
-          "id": 62,
+          "id": 70,
           "href": "#",
           "text": "Home",
           "new_tab": false
         },
         {
-          "id": 63,
+          "id": 71,
           "href": "#grid-one",
           "text": "Grid One",
           "new_tab": false
         },
         {
-          "id": 64,
+          "id": 72,
           "href": "#gallery",
           "text": "Gallery",
           "new_tab": false
         },
         {
-          "id": 65,
+          "id": 73,
           "href": "#grid-two",
           "text": "Grid Two",
           "new_tab": false
         }
       ],
       "logo": {
-        "id": 17,
+        "id": 19,
         "href": "#",
         "image": {
           "id": 14,
           "documentId": "c7b4017q72bbv6gg21d6w201",
-          "name": "a.svg",
-          "alternativeText": "image description",
+          "name": "Logo LCX.svg",
+          "alternativeText": "LCX Contabilidade",
           "caption": null,
           "width": 1356,
           "height": 350,
           "formats": null,
-          "hash": "0f285c3e84",
+          "hash": "Logo_LCX_0f285c3e84",
           "ext": ".svg",
           "mime": "image/svg+xml",
           "size": 7.76,
-          "url": "/uploads/a.svg",
+          "url": "/uploads/Logo_LCX_0f285c3e84.svg",
           "previewUrl": null,
           "provider": "local",
           "provider_metadata": null,
@@ -65,16 +65,16 @@
     "sections": [
       {
         "__component": "section.grid-two-columns",
-        "id": 15,
+        "id": 17,
         "title": "Minha primeira section!",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex enim, consectetur sodales nulla id, convallis vestibulum augue. Nam et nunc nec metus rutrum dignissim. Maecenas ut fringilla lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et ex condimentum arcu fermentum condimentum vel quis ex. In purus augue, pretium nec enim vel, ullamcorper feugiat metus. Etiam ac est id ex sagittis fermentum ac ut lacus. Integer volutpat scelerisque turpis sed mattis. Praesent ultricies posuere metus sollicitudin rutrum. Integer cursus placerat odio vitae pharetra. Proin et quam feugiat ante congue ornare ut non sem. Duis faucibus pharetra mattis. Maecenas hendrerit lectus ut finibus placerat. Morbi sit amet elit sit amet quam semper placerat. Quisque vulputate mauris in tincidunt gravida. Phasellus blandit nec dui ut mattis.",
-        "align": "justify",
         "metadata": {
-          "id": 46,
+          "id": 55,
           "section_name": "home",
           "section_id": "home",
           "hasBg": false,
-          "titleUpperCase": true
+          "titleUpperCase": true,
+          "textAlign": "justify"
         },
         "image": {
           "id": 5,
@@ -149,30 +149,31 @@
       },
       {
         "__component": "section.grid-content",
-        "id": 13,
+        "id": 15,
         "title": "Grid One",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex enim, consectetur sodales nulla id, convallis vestibulum augue. Nam et nunc nec metus rutrum dignissim. Maecenas ut fringilla lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et ex condimentum arcu fermentum condimentum vel quis ex. In purus augue, pretium nec enim vel, ullamcorper feugiat metus. Etiam ac est id ex sagittis fermentum ac ut lacus. Integer volutpat scelerisque turpis sed mattis. Praesent ultricies posuere metus sollicitudin rutrum. Integer cursus placerat odio vitae pharetra. Proin et quam feugiat ante congue ornare ut non sem. Duis faucibus pharetra mattis. Maecenas hendrerit lectus ut finibus placerat. Morbi sit amet elit sit amet quam semper placerat. Quisque vulputate mauris in tincidunt gravida. Phasellus blandit nec dui ut mattis.",
         "metadata": {
-          "id": 47,
+          "id": 56,
           "section_name": "grid-one",
           "section_id": "grid-one",
           "hasBg": true,
-          "titleUpperCase": true
+          "titleUpperCase": true,
+          "textAlign": "justify"
         }
       },
       {
-        "__component": "section.grid-three-columns",
-        "id": 20,
+        "__component": "section.grid-images",
+        "id": 3,
         "title": "Gallery",
         "description": "Uma breve descrição...",
         "metadata": {
-          "id": 48,
+          "id": 57,
           "section_name": "gallery",
           "section_id": "gallery",
           "hasBg": false,
-          "titleUpperCase": true
+          "titleUpperCase": true,
+          "textAlign": "left"
         },
-        "grid_text": [],
         "images": [
           {
             "id": 13,
@@ -315,144 +316,74 @@
             "publishedAt": "2025-01-15T00:34:25.457Z"
           },
           {
-            "id": 4,
-            "documentId": "nzu9y1fji3emgxg46cogi6pn",
-            "name": "pexels-mikhail-nilov-7534770.jpg",
+            "id": 10,
+            "documentId": "vcph9hsjqxko5wox8xw8ajb7",
+            "name": "pexels-jeshoots-com-147458-13861.jpg",
             "alternativeText": null,
             "caption": null,
             "width": 1920,
-            "height": 2880,
+            "height": 1280,
             "formats": {
               "large": {
                 "ext": ".jpg",
-                "url": "/uploads/large_pexels_mikhail_nilov_7534770_6594f42793.jpg",
-                "hash": "large_pexels_mikhail_nilov_7534770_6594f42793",
+                "url": "/uploads/large_pexels_jeshoots_com_147458_13861_41064bf029.jpg",
+                "hash": "large_pexels_jeshoots_com_147458_13861_41064bf029",
                 "mime": "image/jpeg",
-                "name": "large_pexels-mikhail-nilov-7534770.jpg",
+                "name": "large_pexels-jeshoots-com-147458-13861.jpg",
                 "path": null,
-                "size": 60.4,
-                "width": 667,
-                "height": 1000,
-                "sizeInBytes": 60403
+                "size": 78.08,
+                "width": 1000,
+                "height": 667,
+                "sizeInBytes": 78085
               },
               "small": {
                 "ext": ".jpg",
-                "url": "/uploads/small_pexels_mikhail_nilov_7534770_6594f42793.jpg",
-                "hash": "small_pexels_mikhail_nilov_7534770_6594f42793",
+                "url": "/uploads/small_pexels_jeshoots_com_147458_13861_41064bf029.jpg",
+                "hash": "small_pexels_jeshoots_com_147458_13861_41064bf029",
                 "mime": "image/jpeg",
-                "name": "small_pexels-mikhail-nilov-7534770.jpg",
+                "name": "small_pexels-jeshoots-com-147458-13861.jpg",
                 "path": null,
-                "size": 20.92,
-                "width": 333,
-                "height": 500,
-                "sizeInBytes": 20919
-              },
-              "medium": {
-                "ext": ".jpg",
-                "url": "/uploads/medium_pexels_mikhail_nilov_7534770_6594f42793.jpg",
-                "hash": "medium_pexels_mikhail_nilov_7534770_6594f42793",
-                "mime": "image/jpeg",
-                "name": "medium_pexels-mikhail-nilov-7534770.jpg",
-                "path": null,
-                "size": 38.81,
+                "size": 28.41,
                 "width": 500,
-                "height": 750,
-                "sizeInBytes": 38812
-              },
-              "thumbnail": {
-                "ext": ".jpg",
-                "url": "/uploads/thumbnail_pexels_mikhail_nilov_7534770_6594f42793.jpg",
-                "hash": "thumbnail_pexels_mikhail_nilov_7534770_6594f42793",
-                "mime": "image/jpeg",
-                "name": "thumbnail_pexels-mikhail-nilov-7534770.jpg",
-                "path": null,
-                "size": 4.02,
-                "width": 104,
-                "height": 156,
-                "sizeInBytes": 4023
-              }
-            },
-            "hash": "pexels_mikhail_nilov_7534770_6594f42793",
-            "ext": ".jpg",
-            "mime": "image/jpeg",
-            "size": 266.63,
-            "url": "/uploads/pexels_mikhail_nilov_7534770_6594f42793.jpg",
-            "previewUrl": null,
-            "provider": "local",
-            "provider_metadata": null,
-            "createdAt": "2025-01-15T00:34:24.662Z",
-            "updatedAt": "2025-01-15T00:34:24.662Z",
-            "publishedAt": "2025-01-15T00:34:24.662Z"
-          },
-          {
-            "id": 3,
-            "documentId": "rb3tufjxfqbex62leladz1oo",
-            "name": "pexels-olly-3778952.jpg",
-            "alternativeText": null,
-            "caption": null,
-            "width": 1920,
-            "height": 2690,
-            "formats": {
-              "large": {
-                "ext": ".jpg",
-                "url": "/uploads/large_pexels_olly_3778952_81883b6021.jpg",
-                "hash": "large_pexels_olly_3778952_81883b6021",
-                "mime": "image/jpeg",
-                "name": "large_pexels-olly-3778952.jpg",
-                "path": null,
-                "size": 52.94,
-                "width": 714,
-                "height": 1000,
-                "sizeInBytes": 52939
-              },
-              "small": {
-                "ext": ".jpg",
-                "url": "/uploads/small_pexels_olly_3778952_81883b6021.jpg",
-                "hash": "small_pexels_olly_3778952_81883b6021",
-                "mime": "image/jpeg",
-                "name": "small_pexels-olly-3778952.jpg",
-                "path": null,
-                "size": 19.84,
-                "width": 357,
-                "height": 500,
-                "sizeInBytes": 19837
+                "height": 333,
+                "sizeInBytes": 28408
               },
               "medium": {
                 "ext": ".jpg",
-                "url": "/uploads/medium_pexels_olly_3778952_81883b6021.jpg",
-                "hash": "medium_pexels_olly_3778952_81883b6021",
+                "url": "/uploads/medium_pexels_jeshoots_com_147458_13861_41064bf029.jpg",
+                "hash": "medium_pexels_jeshoots_com_147458_13861_41064bf029",
                 "mime": "image/jpeg",
-                "name": "medium_pexels-olly-3778952.jpg",
+                "name": "medium_pexels-jeshoots-com-147458-13861.jpg",
                 "path": null,
-                "size": 34.77,
-                "width": 535,
-                "height": 750,
-                "sizeInBytes": 34765
+                "size": 51.25,
+                "width": 750,
+                "height": 500,
+                "sizeInBytes": 51247
               },
               "thumbnail": {
                 "ext": ".jpg",
-                "url": "/uploads/thumbnail_pexels_olly_3778952_81883b6021.jpg",
-                "hash": "thumbnail_pexels_olly_3778952_81883b6021",
+                "url": "/uploads/thumbnail_pexels_jeshoots_com_147458_13861_41064bf029.jpg",
+                "hash": "thumbnail_pexels_jeshoots_com_147458_13861_41064bf029",
                 "mime": "image/jpeg",
-                "name": "thumbnail_pexels-olly-3778952.jpg",
+                "name": "thumbnail_pexels-jeshoots-com-147458-13861.jpg",
                 "path": null,
-                "size": 3.9,
-                "width": 111,
+                "size": 9.4,
+                "width": 234,
                 "height": 156,
-                "sizeInBytes": 3902
+                "sizeInBytes": 9399
               }
             },
-            "hash": "pexels_olly_3778952_81883b6021",
+            "hash": "pexels_jeshoots_com_147458_13861_41064bf029",
             "ext": ".jpg",
             "mime": "image/jpeg",
-            "size": 197.68,
-            "url": "/uploads/pexels_olly_3778952_81883b6021.jpg",
+            "size": 188.53,
+            "url": "/uploads/pexels_jeshoots_com_147458_13861_41064bf029.jpg",
             "previewUrl": null,
             "provider": "local",
             "provider_metadata": null,
-            "createdAt": "2025-01-15T00:34:24.620Z",
-            "updatedAt": "2025-01-15T00:34:24.620Z",
-            "publishedAt": "2025-01-15T00:34:24.620Z"
+            "createdAt": "2025-01-15T00:34:25.283Z",
+            "updatedAt": "2025-01-15T00:34:25.283Z",
+            "publishedAt": "2025-01-15T00:34:25.283Z"
           },
           {
             "id": 6,
@@ -593,39 +524,109 @@
             "createdAt": "2025-01-15T00:34:25.146Z",
             "updatedAt": "2025-01-15T00:34:25.146Z",
             "publishedAt": "2025-01-15T00:34:25.146Z"
+          },
+          {
+            "id": 4,
+            "documentId": "nzu9y1fji3emgxg46cogi6pn",
+            "name": "pexels-mikhail-nilov-7534770.jpg",
+            "alternativeText": null,
+            "caption": null,
+            "width": 1920,
+            "height": 2880,
+            "formats": {
+              "large": {
+                "ext": ".jpg",
+                "url": "/uploads/large_pexels_mikhail_nilov_7534770_6594f42793.jpg",
+                "hash": "large_pexels_mikhail_nilov_7534770_6594f42793",
+                "mime": "image/jpeg",
+                "name": "large_pexels-mikhail-nilov-7534770.jpg",
+                "path": null,
+                "size": 60.4,
+                "width": 667,
+                "height": 1000,
+                "sizeInBytes": 60403
+              },
+              "small": {
+                "ext": ".jpg",
+                "url": "/uploads/small_pexels_mikhail_nilov_7534770_6594f42793.jpg",
+                "hash": "small_pexels_mikhail_nilov_7534770_6594f42793",
+                "mime": "image/jpeg",
+                "name": "small_pexels-mikhail-nilov-7534770.jpg",
+                "path": null,
+                "size": 20.92,
+                "width": 333,
+                "height": 500,
+                "sizeInBytes": 20919
+              },
+              "medium": {
+                "ext": ".jpg",
+                "url": "/uploads/medium_pexels_mikhail_nilov_7534770_6594f42793.jpg",
+                "hash": "medium_pexels_mikhail_nilov_7534770_6594f42793",
+                "mime": "image/jpeg",
+                "name": "medium_pexels-mikhail-nilov-7534770.jpg",
+                "path": null,
+                "size": 38.81,
+                "width": 500,
+                "height": 750,
+                "sizeInBytes": 38812
+              },
+              "thumbnail": {
+                "ext": ".jpg",
+                "url": "/uploads/thumbnail_pexels_mikhail_nilov_7534770_6594f42793.jpg",
+                "hash": "thumbnail_pexels_mikhail_nilov_7534770_6594f42793",
+                "mime": "image/jpeg",
+                "name": "thumbnail_pexels-mikhail-nilov-7534770.jpg",
+                "path": null,
+                "size": 4.02,
+                "width": 104,
+                "height": 156,
+                "sizeInBytes": 4023
+              }
+            },
+            "hash": "pexels_mikhail_nilov_7534770_6594f42793",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "size": 266.63,
+            "url": "/uploads/pexels_mikhail_nilov_7534770_6594f42793.jpg",
+            "previewUrl": null,
+            "provider": "local",
+            "provider_metadata": null,
+            "createdAt": "2025-01-15T00:34:24.662Z",
+            "updatedAt": "2025-01-15T00:34:24.662Z",
+            "publishedAt": "2025-01-15T00:34:24.662Z"
           }
         ]
       },
       {
         "__component": "section.grid-three-columns",
-        "id": 21,
+        "id": 23,
         "title": "Grid Two",
         "description": "Uma breve descrição...",
         "metadata": {
-          "id": 49,
+          "id": 58,
           "section_name": "grid-two",
-          "section_id": "grid-teo",
+          "section_id": "grid-two",
           "hasBg": true,
-          "titleUpperCase": true
+          "titleUpperCase": true,
+          "textAlign": "justify"
         },
         "grid_text": [
           {
-            "id": 25,
+            "id": 31,
             "title": "Teste 1",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex enim, consectetur sodales nulla id, convallis vestibulum augue. Nam et nunc nec metus rutrum dignissim. Maecenas ut fringilla lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et ex condimentum arcu fermentum condimentum vel quis ex. In purus augue, pretium nec enim vel, ullamcorper feugiat metus. Etiam ac est id ex sagittis fermentum ac ut lacus. Integer volutpat scelerisque turpis sed mattis. Praesent ultricies posuere metus sollicitudin rutrum. Integer cursus placerat odio vitae pharetra. Proin et quam feugiat ante congue ornare ut non sem. Duis faucibus pharetra mattis. Maecenas hendrerit lectus ut finibus placerat. Morbi sit amet elit sit amet quam semper placerat. Quisque vulputate mauris in tincidunt gravida. Phasellus blandit nec dui ut mattis."
           },
           {
-            "id": 26,
+            "id": 32,
             "title": "Teste 2",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex enim, consectetur sodales nulla id, convallis vestibulum augue. Nam et nunc nec metus rutrum dignissim. Maecenas ut fringilla lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et ex condimentum arcu fermentum condimentum vel quis ex. In purus augue, pretium nec enim vel, ullamcorper feugiat metus. Etiam ac est id ex sagittis fermentum ac ut lacus. Integer volutpat scelerisque turpis sed mattis. Praesent ultricies posuere metus sollicitudin rutrum. Integer cursus placerat odio vitae pharetra. Proin et quam feugiat ante congue ornare ut non sem. Duis faucibus pharetra mattis. Maecenas hendrerit lectus ut finibus placerat. Morbi sit amet elit sit amet quam semper placerat. Quisque vulputate mauris in tincidunt gravida. Phasellus blandit nec dui ut mattis."
           },
           {
-            "id": 27,
+            "id": 33,
             "title": "Teste 3",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex enim, consectetur sodales nulla id, convallis vestibulum augue. Nam et nunc nec metus rutrum dignissim. Maecenas ut fringilla lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et ex condimentum arcu fermentum condimentum vel quis ex. In purus augue, pretium nec enim vel, ullamcorper feugiat metus. Etiam ac est id ex sagittis fermentum ac ut lacus. Integer volutpat scelerisque turpis sed mattis. Praesent ultricies posuere metus sollicitudin rutrum. Integer cursus placerat odio vitae pharetra. Proin et quam feugiat ante congue ornare ut non sem. Duis faucibus pharetra mattis. Maecenas hendrerit lectus ut finibus placerat. Morbi sit amet elit sit amet quam semper placerat. Quisque vulputate mauris in tincidunt gravida. Phasellus blandit nec dui ut mattis."
           }
-        ],
-        "images": null
+        ]
       }
     ]
   },
