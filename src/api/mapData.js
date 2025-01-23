@@ -47,8 +47,8 @@ const mapSection = (section) => {
         component: 'GridContent',
         title: section.title ?? '',
         text: section.text ?? '',
-        hasBg: section.metadata.hasBg ?? false,
-        titleUpperCase: section.metadata.titleUpperCase ?? true,
+        hasBg: section.metadata?.hasBg ?? false,
+        titleUpperCase: section.metadata?.titleUpperCase ?? true,
         textAlign: section.metadata?.textAlign ?? '',
       };
     },
@@ -59,6 +59,28 @@ const mapSection = (section) => {
         title: section.title ?? '',
         text: section.text ?? '',
         imgSrc: section.image?.url ?? '',
+        hasBg: section.metadata?.hasBg ?? false,
+        titleUpperCase: section.metadata?.titleUpperCase ?? true,
+        textAlign: section.metadata?.textAlign ?? '',
+      };
+    },
+
+    'section.grid-three-columns': (section) => {
+      const gridItems = Array.isArray(section.grid_text)
+        ? section.grid_text.map((item, index) => {
+            return {
+              id: item.id ?? index + 1,
+              title: item.title ?? '',
+              text: item.text ?? '',
+            };
+          })
+        : [];
+
+      return {
+        component: 'GridThreeColumns',
+        title: section.title ?? '',
+        description: section.description ?? '',
+        gridItems,
         hasBg: section.metadata?.hasBg ?? false,
         titleUpperCase: section.metadata?.titleUpperCase ?? true,
         textAlign: section.metadata?.textAlign ?? '',

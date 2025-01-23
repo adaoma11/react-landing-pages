@@ -41,6 +41,7 @@ GridThreeColumns.propTypes = {
   description: PropTypes.string.isRequired,
   gridItems: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
     }),
