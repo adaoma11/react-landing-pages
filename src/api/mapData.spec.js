@@ -164,7 +164,7 @@ describe('mapHeader', () => {
 });
 
 // mapSections
-describe('mapSections', () => {
+describe('mapSection default values', () => {
   it('should handle sections with unknown components gracefully', () => {
     const result = mapPage({
       sections: [{ __component: 'unknown.component' }],
@@ -182,72 +182,78 @@ describe('mapSections', () => {
     ]);
   });
 
-  it('should return default values for grid-content when properties are missing', () => {
-    const result = mapPage({
-      sections: [{ __component: 'section.grid-content' }],
-    });
+  describe('mapSection GridContent', () => {
+    it('should return default values for grid-content when properties are missing', () => {
+      const result = mapPage({
+        sections: [{ __component: 'section.grid-content' }],
+      });
 
-    expect(result.sections).toEqual([
-      {
-        component: 'GridContent',
-        title: '',
-        text: '',
-        hasBg: false,
-        titleUpperCase: true,
-        textAlign: '',
-      },
-    ]);
+      expect(result.sections).toEqual([
+        {
+          component: 'GridContent',
+          title: '',
+          text: '',
+          hasBg: false,
+          titleUpperCase: true,
+          textAlign: '',
+        },
+      ]);
+    });
   });
 
-  it('should return default values for grid-two-columns when properties are missing', () => {
-    const result = mapPage({
-      sections: [{ __component: 'section.grid-two-columns' }],
-    });
+  describe('mapSection GridTwoColumns', () => {
+    it('should return default values for grid-two-columns when properties are missing', () => {
+      const result = mapPage({
+        sections: [{ __component: 'section.grid-two-columns' }],
+      });
 
-    expect(result.sections).toEqual([
-      {
-        component: 'GridTwoColumns',
-        title: '',
-        text: '',
-        imgSrc: '',
-        hasBg: false,
-        titleUpperCase: true,
-        textAlign: '',
-      },
-    ]);
+      expect(result.sections).toEqual([
+        {
+          component: 'GridTwoColumns',
+          title: '',
+          text: '',
+          imgSrc: '',
+          hasBg: false,
+          titleUpperCase: true,
+          textAlign: '',
+        },
+      ]);
+    });
   });
 
-  it('should return default values for grid-three-columns when properties are missing', () => {
-    const result = mapPage({
-      sections: [{ __component: 'section.grid-three-columns' }],
+  describe('mapSection GridThreeColumns', () => {
+    it('should return default values for grid-three-columns when properties are missing', () => {
+      const result = mapPage({
+        sections: [{ __component: 'section.grid-three-columns' }],
+      });
+
+      expect(result.sections).toEqual([
+        {
+          component: 'GridThreeColumns',
+          title: '',
+          description: '',
+          gridItems: [],
+          hasBg: false,
+          titleUpperCase: true,
+          textAlign: '',
+        },
+      ]);
     });
 
-    expect(result.sections).toEqual([
-      {
-        component: 'GridThreeColumns',
-        title: '',
-        description: '',
-        gridItems: [],
-        hasBg: false,
-        titleUpperCase: true,
-        textAlign: '',
-      },
-    ]);
-  });
+    it('should return default values for gridItems when grid_text properties are missing', () => {
+      const result = mapPage({
+        sections: [
+          { __component: 'section.grid-three-columns', grid_text: [{}] },
+        ],
+      });
 
-  it('should return default values for gridItems when grid_text properties are missing', () => {
-    const result = mapPage({
-      sections: [
-        { __component: 'section.grid-three-columns', grid_text: [{}] },
-      ],
+      expect(result.sections[0].gridItems).toEqual([
+        {
+          id: 1,
+          title: '',
+          text: '',
+        },
+      ]);
     });
-
-    expect(result.sections[0].gridItems).toEqual([
-      {
-        id: 1,
-        title: '',
-        text: '',
-      },
-    ]);
   });
 });
