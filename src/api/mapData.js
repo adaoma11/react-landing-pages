@@ -87,6 +87,28 @@ const mapSection = (section) => {
       };
     },
 
+    'section.grid-images': (section) => {
+      const gridItems = Array.isArray(section.images)
+        ? section.images.map((item, index) => {
+            return {
+              id: item.id ?? index + 1,
+              alt: item.alternativeText ?? '',
+              src: item.url ?? '',
+            };
+          })
+        : [];
+
+      return {
+        component: 'GridImages',
+        title: section.title ?? '',
+        description: section.description ?? '',
+        gridItems,
+        hasBg: section.metadata?.hasBg ?? false,
+        titleUpperCase: section.metadata?.titleUpperCase ?? true,
+        textAlign: section.metadata?.textAlign ?? '',
+      };
+    },
+
     default: () => {
       return {
         component: '',

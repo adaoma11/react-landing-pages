@@ -82,6 +82,23 @@ describe('mapPage', () => {
             },
           ],
         },
+        {
+          __component: 'section.grid-images',
+          title: 'Grid Images',
+          description: 'Uma breve descrição',
+          metadata: {
+            hasBg: true,
+            titleUpperCase: false,
+            textAlign: 'justify',
+          },
+          images: [
+            {
+              id: 1,
+              alternativeText: 'Texto alternativo',
+              url: 'image.jpg',
+            },
+          ],
+        },
       ],
     };
 
@@ -137,6 +154,21 @@ describe('mapPage', () => {
               id: 3,
               title: 'Teste 3',
               text: 'Some text here',
+            },
+          ],
+          hasBg: true,
+          titleUpperCase: false,
+          textAlign: 'justify',
+        },
+        {
+          component: 'GridImages',
+          title: 'Grid Images',
+          description: 'Uma breve descrição',
+          gridItems: [
+            {
+              id: 1,
+              alt: 'Texto alternativo',
+              src: 'image.jpg',
             },
           ],
           hasBg: true,
@@ -255,5 +287,39 @@ describe('mapSection default values', () => {
         },
       ]);
     });
+  });
+});
+
+describe('mapSection GridImages', () => {
+  it('should return default values for grid-images when properties are missing', () => {
+    const result = mapPage({
+      sections: [{ __component: 'section.grid-images' }],
+    });
+
+    expect(result.sections).toEqual([
+      {
+        component: 'GridImages',
+        title: '',
+        description: '',
+        gridItems: [],
+        hasBg: false,
+        titleUpperCase: true,
+        textAlign: '',
+      },
+    ]);
+  });
+
+  it('should return default values for gridItems when images properties are missing', () => {
+    const result = mapPage({
+      sections: [{ __component: 'section.grid-images', images: [{}] }],
+    });
+
+    expect(result.sections[0].gridItems).toEqual([
+      {
+        id: 1,
+        alt: '',
+        src: '',
+      },
+    ]);
   });
 });
