@@ -204,12 +204,10 @@ describe('mapSection default values', () => {
 
     expect(result.sections).toEqual([
       {
-        component: '',
         title: '',
-        text: '',
         textAlign: '',
-        hasBg: '',
-        titleUpperCase: '',
+        hasBg: false,
+        titleUpperCase: true,
       },
     ]);
   });

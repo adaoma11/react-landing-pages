@@ -41,28 +41,29 @@ const mapSections = (sections) => {
 };
 
 const mapSection = (section) => {
+  const applyDefaults = (section, extra) => {
+    return {
+      title: section?.title ?? '',
+      hasBg: section?.metadata?.hasBg ?? false,
+      titleUpperCase: section?.metadata?.titleUpperCase ?? true,
+      textAlign: section?.metadata?.textAlign ?? '',
+      ...extra,
+    };
+  };
   const sectionHandlers = {
     'section.grid-content': (section) => {
-      return {
+      return applyDefaults(section, {
         component: 'GridContent',
-        title: section.title ?? '',
         text: section.text ?? '',
-        hasBg: section.metadata?.hasBg ?? false,
-        titleUpperCase: section.metadata?.titleUpperCase ?? true,
-        textAlign: section.metadata?.textAlign ?? '',
-      };
+      });
     },
 
     'section.grid-two-columns': (section) => {
-      return {
+      return applyDefaults(section, {
         component: 'GridTwoColumns',
-        title: section.title ?? '',
         text: section.text ?? '',
         imgSrc: section.image?.url ?? '',
-        hasBg: section.metadata?.hasBg ?? false,
-        titleUpperCase: section.metadata?.titleUpperCase ?? true,
-        textAlign: section.metadata?.textAlign ?? '',
-      };
+      });
     },
 
     'section.grid-three-columns': (section) => {
@@ -76,15 +77,11 @@ const mapSection = (section) => {
           })
         : [];
 
-      return {
+      return applyDefaults(section, {
         component: 'GridThreeColumns',
-        title: section.title ?? '',
         description: section.description ?? '',
         gridItems,
-        hasBg: section.metadata?.hasBg ?? false,
-        titleUpperCase: section.metadata?.titleUpperCase ?? true,
-        textAlign: section.metadata?.textAlign ?? '',
-      };
+      });
     },
 
     'section.grid-images': (section) => {
@@ -98,30 +95,14 @@ const mapSection = (section) => {
           })
         : [];
 
-      return {
+      return applyDefaults(section, {
         component: 'GridImages',
-        title: section.title ?? '',
         description: section.description ?? '',
         gridItems,
-        hasBg: section.metadata?.hasBg ?? false,
-        titleUpperCase: section.metadata?.titleUpperCase ?? true,
-        textAlign: section.metadata?.textAlign ?? '',
-      };
-    },
-
-    default: () => {
-      return {
-        component: '',
-        title: '',
-        text: '',
-        hasBg: '',
-        titleUpperCase: '',
-        textAlign: '',
-      };
+      });
     },
   };
 
-  const handler =
-    sectionHandlers[section.__component] || sectionHandlers.default;
+  const handler = sectionHandlers[section.__component] || applyDefaults;
   return handler(section);
 };
