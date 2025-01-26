@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Base } from '../Base';
 import { PageNotFound } from '../PageNotFound';
+import { Loading } from '../Loading';
 import { mapPage } from '../../api/mapData';
 import mock from '../Base/mock';
 
@@ -29,6 +30,8 @@ function Home() {
   return (
     <>
       {!pageData && <PageNotFound />}
+
+      {pageData && !pageData.slug && <Loading />}
 
       {pageData && pageData.slug && <Base {...mock} />}
     </>
