@@ -7,7 +7,7 @@ export const Base = ({ children, links, logoData, footerText }) => {
   return (
     <>
       <Navbar links={links} logoData={logoData} />
-      <main>{children}</main>
+      <main style={{ paddingTop: '100px' }}>{children}</main>
       <GoTopBtn />
       <Footer>{footerText}</Footer>
     </>

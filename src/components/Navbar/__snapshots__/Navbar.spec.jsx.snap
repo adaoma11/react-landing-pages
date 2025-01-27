@@ -12,12 +12,10 @@ exports[`<Navbar /> should match snapshot 1`] = `
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
-  top: 0;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 0 10px 0;
-  background-color: #FFFFFF;
+  padding: 10px 0;
 }
 
 .c2 {
@@ -84,14 +82,13 @@ exports[`<Navbar /> should match snapshot 1`] = `
 
 @media (max-width: 1230px) {
   .c0 {
-    padding: 0px 20px;
+    padding: 10px 20px;
   }
 }
 
 @media (max-width: 768px) {
   .c0 {
-    position: relative;
-    height: 100px;
+    min-height: 100px;
     align-items: center;
     justify-content: center;
   }

@@ -4,6 +4,14 @@ import {
   Close as CloseSvg,
 } from '@styled-icons/material-outlined';
 
+export const Header = styled.header`
+  ${({ theme }) => css`
+    position: fixed;
+    width: 100%;
+    background-color: ${theme.colors.white};
+  `}
+`;
+
 export const Nav = styled.nav`
   ${({ theme }) => css`
     display: flex;
@@ -14,7 +22,6 @@ export const Nav = styled.nav`
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px 0;
-    background-color: ${theme.colors.white};
 
     @media (max-width: 1230px) {
       padding: 10px 20px;

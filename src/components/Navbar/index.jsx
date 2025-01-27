@@ -8,28 +8,30 @@ export const Navbar = ({ links, logoData }) => {
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <Styled.Nav>
-      {logoData && <Logo {...logoData} />}
+    <Styled.Header>
+      <Styled.Nav>
+        {logoData && <Logo {...logoData} />}
 
-      {links && (
-        <>
-          <Styled.Menu $visible={menuVisible} aria-label="main menu">
-            {links.map((link, index) => (
-              <li key={index} onClick={() => setMenuVisible(false)}>
-                <MenuLink {...link} />
-              </li>
-            ))}
-          </Styled.Menu>
+        {links && (
+          <>
+            <Styled.Menu $visible={menuVisible} aria-label="main menu">
+              {links.map((link, index) => (
+                <li key={index} onClick={() => setMenuVisible(false)}>
+                  <MenuLink {...link} />
+                </li>
+              ))}
+            </Styled.Menu>
 
-          <Styled.Button
-            aria-label={menuVisible ? 'close menu' : 'open menu'}
-            onClick={() => setMenuVisible((v) => !v)}
-          >
-            {menuVisible ? <Styled.closeBtn /> : <Styled.openBtn />}
-          </Styled.Button>
-        </>
-      )}
-    </Styled.Nav>
+            <Styled.Button
+              aria-label={menuVisible ? 'close menu' : 'open menu'}
+              onClick={() => setMenuVisible((v) => !v)}
+            >
+              {menuVisible ? <Styled.closeBtn /> : <Styled.openBtn />}
+            </Styled.Button>
+          </>
+        )}
+      </Styled.Nav>
+    </Styled.Header>
   );
 };
 
