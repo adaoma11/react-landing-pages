@@ -25,6 +25,7 @@ describe('mapPage', () => {
       footer_text: 'Test Footer',
       header: {
         logo: {
+          text: 'CompanyName',
           image: { alternativeText: 'Logo Alt', url: '/logo.png' },
           href: '/home',
         },
@@ -39,6 +40,7 @@ describe('mapPage', () => {
           title: 'Grid Content',
           text: 'Some text here',
           metadata: {
+            section_id: 'the-section-id',
             hasBg: true,
             titleUpperCase: false,
             textAlign: 'justify',
@@ -50,6 +52,7 @@ describe('mapPage', () => {
           text: 'Some text here',
           image: { url: '/image.png' },
           metadata: {
+            section_id: 'the-section-id',
             hasBg: true,
             titleUpperCase: false,
             textAlign: 'justify',
@@ -60,6 +63,7 @@ describe('mapPage', () => {
           title: 'Grid Three Columns',
           description: 'Uma breve descrição',
           metadata: {
+            section_id: 'the-section-id',
             hasBg: true,
             titleUpperCase: false,
             textAlign: 'justify',
@@ -87,6 +91,7 @@ describe('mapPage', () => {
           title: 'Grid Images',
           description: 'Uma breve descrição',
           metadata: {
+            section_id: 'the-section-id',
             hasBg: true,
             titleUpperCase: false,
             textAlign: 'justify',
@@ -95,7 +100,7 @@ describe('mapPage', () => {
             {
               id: 1,
               alternativeText: 'Texto alternativo',
-              url: 'image.jpg',
+              url: '/image.jpg',
             },
           ],
         },
@@ -109,8 +114,8 @@ describe('mapPage', () => {
       slug: 'test-page',
       footerText: 'Test Footer',
       logoData: {
-        text: 'Logo Alt',
-        imgSrc: '/logo.png',
+        text: 'CompanyName',
+        imgSrc: 'http://localhost:1337/logo.png',
         href: '/home',
       },
       links: [
@@ -120,6 +125,7 @@ describe('mapPage', () => {
       sections: [
         {
           component: 'GridContent',
+          sectionId: 'the-section-id',
           title: 'Grid Content',
           text: 'Some text here',
           hasBg: true,
@@ -128,15 +134,17 @@ describe('mapPage', () => {
         },
         {
           component: 'GridTwoColumns',
+          sectionId: 'the-section-id',
           title: 'Grid Two Columns',
           text: 'Some text here',
-          imgSrc: '/image.png',
+          imgSrc: 'http://localhost:1337/image.png',
           hasBg: true,
           titleUpperCase: false,
           textAlign: 'justify',
         },
         {
           component: 'GridThreeColumns',
+          sectionId: 'the-section-id',
           title: 'Grid Three Columns',
           description: 'Uma breve descrição',
           gridItems: [
@@ -162,13 +170,14 @@ describe('mapPage', () => {
         },
         {
           component: 'GridImages',
+          sectionId: 'the-section-id',
           title: 'Grid Images',
           description: 'Uma breve descrição',
           gridItems: [
             {
               id: 1,
               alt: 'Texto alternativo',
-              src: 'image.jpg',
+              imgSrc: 'http://localhost:1337/image.jpg',
             },
           ],
           hasBg: true,
@@ -205,6 +214,7 @@ describe('mapSection default values', () => {
     expect(result.sections).toEqual([
       {
         title: '',
+        sectionId: '',
         textAlign: '',
         hasBg: false,
         titleUpperCase: true,
@@ -222,6 +232,7 @@ describe('mapSection default values', () => {
         {
           component: 'GridContent',
           title: '',
+          sectionId: '',
           text: '',
           hasBg: false,
           titleUpperCase: true,
@@ -241,6 +252,7 @@ describe('mapSection default values', () => {
         {
           component: 'GridTwoColumns',
           title: '',
+          sectionId: '',
           text: '',
           imgSrc: '',
           hasBg: false,
@@ -261,6 +273,7 @@ describe('mapSection default values', () => {
         {
           component: 'GridThreeColumns',
           title: '',
+          sectionId: '',
           description: '',
           gridItems: [],
           hasBg: false,
@@ -298,6 +311,7 @@ describe('mapSection GridImages', () => {
       {
         component: 'GridImages',
         title: '',
+        sectionId: '',
         description: '',
         gridItems: [],
         hasBg: false,
@@ -316,7 +330,7 @@ describe('mapSection GridImages', () => {
       {
         id: 1,
         alt: '',
-        src: '',
+        imgSrc: '',
       },
     ]);
   });

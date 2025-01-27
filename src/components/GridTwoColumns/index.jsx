@@ -5,6 +5,7 @@ import { Heading } from '../Heading';
 import { Text } from '../Text';
 
 export const GridTwoColumns = ({
+  sectionId,
   title,
   text,
   textAlign,
@@ -13,7 +14,7 @@ export const GridTwoColumns = ({
   titleUpperCase,
 }) => {
   return (
-    <Section hasBg={hasBg}>
+    <Section sectionId={sectionId} hasBg={hasBg}>
       <Styled.Container data-testid="container">
         <Styled.TextContainer>
           <Heading
@@ -35,6 +36,7 @@ export const GridTwoColumns = ({
 };
 
 GridTwoColumns.propTypes = {
+  sectionId: PropTypes.string,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,

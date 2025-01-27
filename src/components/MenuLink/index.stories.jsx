@@ -6,9 +6,6 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  argTypes: {
-    children: { type: 'string' },
-  },
 };
 
 export const Default = {

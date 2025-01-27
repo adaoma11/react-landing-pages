@@ -14,5 +14,6 @@ export const Default = {
     textAlign: 'justify',
     hasBg: false,
     titleUpperCase: true,
+    sectionId: 'grid-content',
   },
 };

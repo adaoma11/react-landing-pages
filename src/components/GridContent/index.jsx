@@ -5,6 +5,7 @@ import { Heading } from '../Heading';
 import { Text } from '../Text';
 
 export const GridContent = ({
+  sectionId,
   title,
   text,
   textAlign,
@@ -12,11 +13,12 @@ export const GridContent = ({
   titleUpperCase,
 }) => {
   return (
-    <Section hasBg={hasBg}>
+    <Section sectionId={sectionId} hasBg={hasBg}>
       <Styled.Container>
         <Heading
           as="h2"
           upperCase={titleUpperCase}
+          align={textAlign}
           dark={!hasBg}
           title={title}
         />
@@ -29,6 +31,7 @@ export const GridContent = ({
 };
 
 GridContent.propTypes = {
+  sectionId: PropTypes.string,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   textAlign: PropTypes.string,

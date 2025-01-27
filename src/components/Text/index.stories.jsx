@@ -3,9 +3,6 @@ import { Text } from './index';
 const meta = {
   title: 'My Components/Text',
   component: Text,
-  argTypes: {
-    children: { type: 'string' },
-  },
   parameters: {
     backgrounds: {
       default: 'dark',

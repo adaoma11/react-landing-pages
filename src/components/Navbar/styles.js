@@ -10,27 +10,31 @@ export const Nav = styled.nav`
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
-    top: 0;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
     background-color: ${theme.colors.white};
 
     @media (max-width: 1230px) {
-      padding: 0px 20px;
+      padding: 10px 20px;
     }
 
     @media ${theme.medias.small} {
-      align-items: start;
-      justify-content: space-around;
+      min-height: 100px;
+      align-items: center;
+      justify-content: center;
 
       > button {
-        margin: 20px 0px 20px 0px;
+        position: absolute;
+        top: 20px;
+        right: 30px;
       }
 
-      > a > img {
-        margin: 15px 0px 15px 0px;
+      > a {
+        position: absolute;
+        top: 30px;
+        left: 30px;
       }
     }
   `}
@@ -51,6 +55,7 @@ export const Menu = styled.menu`
       height: ${$visible ? '100vh' : '0'};
       flex-flow: column nowrap;
       justify-content: center;
+      text-align: center;
     }
   `}
 `;

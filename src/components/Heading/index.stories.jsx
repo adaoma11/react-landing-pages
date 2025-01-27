@@ -3,9 +3,6 @@ import { Heading } from './index';
 const meta = {
   title: 'My Components/Heading',
   component: Heading,
-  argTypes: {
-    children: { type: 'string' },
-  },
   parameters: {
     backgrounds: {
       default: 'dark',

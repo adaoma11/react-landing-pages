@@ -1,12 +1,19 @@
 import { useEffect, useState } from 'react';
-import { Base } from '../Base';
-import { PageNotFound } from '../PageNotFound';
-import { Loading } from '../Loading';
 import { mapPage } from '../../api/mapData';
-import mock from '../Base/mock';
+
+// components
+import { GridContent } from '../../components/GridContent';
+import { GridTwoColumns } from '../../components/GridTwoColumns';
+import { GridThreeColumns } from '../../components/GridThreeColumns';
+import { GridImages } from '../../components/GridImages';
+
+//templates
+import { Base } from '../Base';
+import { Loading } from '../Loading';
+import { PageNotFound } from '../PageNotFound';
 
 function Home() {
-  const [pageData, setPageData] = useState([]);
+  const [pageData, setPageData] = useState({});
 
   useEffect(() => {
     async function fetchData() {
@@ -27,13 +34,52 @@ function Home() {
     fetchData();
   }, []);
 
+  const sectionHandlers = {
+    GridContent: (section) => {
+      return <GridContent key={section.sectionId} {...section} />;
+    },
+
+    GridTwoColumns: (section) => {
+      return <GridTwoColumns key={section.sectionId} {...section} />;
+    },
+
+    GridThreeColumns: (section) => {
+      return <GridThreeColumns key={section.sectionId} {...section} />;
+    },
+
+    GridImages: (section) => {
+      return <GridImages key={section.sectionId} {...section} />;
+    },
+
+    default: () => {
+      return <PageNotFound />;
+    },
+  };
+
   return (
     <>
       {!pageData && <PageNotFound />}
 
       {pageData && !pageData.slug && <Loading />}
 
-      {pageData && pageData.slug && <Base {...mock} />}
+      {pageData && pageData.slug && (
+        <Base
+          logoData={pageData.logoData}
+          links={pageData.links}
+          footerText={pageData.footerText}
+        >
+          {Array.isArray(pageData?.sections) ? (
+            pageData.sections.map((section) => {
+              const handler =
+                sectionHandlers[section.component] ||
+                sectionHandlers['default'];
+              return handler(section);
+            })
+          ) : (
+            <PageNotFound />
+          )}
+        </Base>
+      )}
     </>
   );
 }

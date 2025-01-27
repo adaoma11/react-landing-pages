@@ -1,7 +1,8 @@
 export const mapPage = (data = {}) => {
+  const urlPrefix = 'http://localhost:1337';
   const { title = '', slug = '', footer_text: footerText = '' } = data;
-  const { logoData, links } = mapHeader(data.header);
-  const sections = mapSections(data.sections);
+  const { logoData, links } = mapHeader(data.header, urlPrefix);
+  const sections = mapSections(data.sections, urlPrefix);
 
   return {
     title,
@@ -13,10 +14,10 @@ export const mapPage = (data = {}) => {
   };
 };
 
-const mapHeader = (header = {}) => {
+const mapHeader = (header = {}, urlPrefix) => {
   const logoData = {
-    text: header.logo?.image?.alternativeText || '',
-    imgSrc: header.logo?.image?.url || '',
+    text: header.logo?.text || '',
+    imgSrc: header.logo?.image?.url ? urlPrefix + header.logo?.image?.url : '',
     href: header.logo?.href || '',
   };
 
@@ -31,19 +32,20 @@ const mapHeader = (header = {}) => {
   return { logoData, links };
 };
 
-const mapSections = (sections) => {
+const mapSections = (sections, urlPrefix) => {
   const sectionsList = Array.isArray(sections)
     ? sections.map((section) => {
-        return mapSection(section);
+        return mapSection(section, urlPrefix);
       })
     : [];
   return sectionsList;
 };
 
-const mapSection = (section) => {
+const mapSection = (section, urlPrefix) => {
   const applyDefaults = (section, extra) => {
     return {
       title: section?.title ?? '',
+      sectionId: section?.metadata?.section_id ?? '',
       hasBg: section?.metadata?.hasBg ?? false,
       titleUpperCase: section?.metadata?.titleUpperCase ?? true,
       textAlign: section?.metadata?.textAlign ?? '',
@@ -62,7 +64,7 @@ const mapSection = (section) => {
       return applyDefaults(section, {
         component: 'GridTwoColumns',
         text: section.text ?? '',
-        imgSrc: section.image?.url ?? '',
+        imgSrc: section.image?.url ? urlPrefix + section.image?.url : '',
       });
     },
 
@@ -90,7 +92,7 @@ const mapSection = (section) => {
             return {
               id: item.id ?? index + 1,
               alt: item.alternativeText ?? '',
-              src: item.url ?? '',
+              imgSrc: item.url ? urlPrefix + item.url : '',
             };
           })
         : [];

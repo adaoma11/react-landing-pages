@@ -45,5 +45,6 @@ export const Default = {
     ],
     hasBg: false,
     titleUpperCase: false,
+    sectionId: 'grid-images',
   },
 };

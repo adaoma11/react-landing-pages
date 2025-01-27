@@ -3,11 +3,6 @@ import { Logo } from './index';
 const meta = {
   title: 'My Components/Logo',
   component: Logo,
-  argTypes: {
-    text: { type: 'string' },
-    imgSrc: { type: 'string' },
-    href: { type: 'string' },
-  },
   parameters: {
     backgrounds: {
       default: 'light',

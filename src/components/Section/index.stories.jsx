@@ -3,10 +3,6 @@ import { Section } from './index';
 const meta = {
   title: 'My Components/Section',
   component: Section,
-  argTypes: {
-    children: { type: '' },
-    hasBg: { type: 'boolean' },
-  },
   parameters: {
     backgrounds: {
       default: 'light',
@@ -38,6 +34,7 @@ export const Default = {
         </p>
       </>
     ),
-    hasBg: true,
+    hasBg: false,
+    sectionId: 'section',
   },
 };

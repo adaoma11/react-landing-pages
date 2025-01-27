@@ -3,7 +3,7 @@
 exports[`<Logo /> should match snapshot 1`] = `
 .c0 {
   font-family: 'Montserrat',sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #0A1128;
   text-decoration: none;

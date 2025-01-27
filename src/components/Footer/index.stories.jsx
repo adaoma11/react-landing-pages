@@ -3,9 +3,6 @@ import { Footer } from '.';
 const meta = {
   title: 'My Components/Footer',
   component: Footer,
-  argTypes: {
-    children: { type: 'string' },
-  },
 };
 
 export default meta;

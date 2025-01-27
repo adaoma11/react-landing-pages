@@ -30,5 +30,6 @@ export const Default = {
     ],
     titleUpperCase: true,
     hasBg: false,
+    sectionId: 'grid-three-columns',
   },
 };

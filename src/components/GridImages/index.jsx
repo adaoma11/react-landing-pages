@@ -4,6 +4,7 @@ import { Section } from '../Section';
 import { Heading } from '../Heading';
 
 export const GridImages = ({
+  sectionId,
   title,
   description,
   gridItems,
@@ -11,7 +12,7 @@ export const GridImages = ({
   hasBg,
 }) => {
   return (
-    <Section hasBg={hasBg}>
+    <Section sectionId={sectionId} hasBg={hasBg}>
       <Heading
         as="h2"
         upperCase={titleUpperCase}
@@ -32,6 +33,7 @@ export const GridImages = ({
 };
 
 GridImages.propTypes = {
+  sectionId: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   gridItems: PropTypes.arrayOf(

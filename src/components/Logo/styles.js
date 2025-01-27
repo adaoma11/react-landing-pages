@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.a`
   ${({ theme }) => css`
     font-family: ${theme.fonts.family.heading};
-    font-size: ${theme.fonts.sizes.large};
+    font-size: ${theme.fonts.sizes.medium};
     font-weight: bold;
     color: ${theme.colors.primary};
     text-decoration: none;
