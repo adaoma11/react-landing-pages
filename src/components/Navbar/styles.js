@@ -9,6 +9,7 @@ export const Header = styled.header`
     position: fixed;
     width: 100%;
     background-color: ${theme.colors.white};
+    z-index: 10;
   `}
 `;
 
