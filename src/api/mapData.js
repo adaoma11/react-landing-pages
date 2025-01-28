@@ -1,8 +1,9 @@
+import config from '../config';
+
 export const mapPage = (data = {}) => {
-  const urlPrefix = 'http://localhost:1337';
   const { title = '', slug = '', footer_text: footerText = '' } = data;
-  const { logoData, links } = mapHeader(data.header, urlPrefix);
-  const sections = mapSections(data.sections, urlPrefix);
+  const { logoData, links } = mapHeader(data.header);
+  const sections = mapSections(data.sections);
 
   return {
     title,
@@ -14,10 +15,12 @@ export const mapPage = (data = {}) => {
   };
 };
 
-const mapHeader = (header = {}, urlPrefix) => {
+const mapHeader = (header = {}) => {
   const logoData = {
     text: header.logo?.text || '',
-    imgSrc: header.logo?.image?.url ? urlPrefix + header.logo?.image?.url : '',
+    imgSrc: header.logo?.image?.url
+      ? config.host + header.logo?.image?.url
+      : '',
     href: header.logo?.href || '',
   };
 
@@ -32,16 +35,16 @@ const mapHeader = (header = {}, urlPrefix) => {
   return { logoData, links };
 };
 
-const mapSections = (sections, urlPrefix) => {
+const mapSections = (sections) => {
   const sectionsList = Array.isArray(sections)
     ? sections.map((section) => {
-        return mapSection(section, urlPrefix);
+        return mapSection(section);
       })
     : [];
   return sectionsList;
 };
 
-const mapSection = (section, urlPrefix) => {
+const mapSection = (section) => {
   const applyDefaults = (section, extra) => {
     return {
       title: section?.title ?? '',
@@ -64,7 +67,7 @@ const mapSection = (section, urlPrefix) => {
       return applyDefaults(section, {
         component: 'GridTwoColumns',
         text: section.text ?? '',
-        imgSrc: section.image?.url ? urlPrefix + section.image?.url : '',
+        imgSrc: section.image?.url ? config.host + section.image?.url : '',
       });
     },
 
@@ -92,7 +95,7 @@ const mapSection = (section, urlPrefix) => {
             return {
               id: item.id ?? index + 1,
               alt: item.alternativeText ?? '',
-              imgSrc: item.url ? urlPrefix + item.url : '',
+              imgSrc: item.url ? config.host + item.url : '',
             };
           })
         : [];
