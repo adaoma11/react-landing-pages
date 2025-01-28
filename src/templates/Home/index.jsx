@@ -36,6 +36,16 @@ function Home() {
     fetchData();
   }, [location]);
 
+  useEffect(() => {
+    if (pageData?.title) {
+      document.title = pageData.title;
+    } else if (pageData) {
+      document.title = 'Carregando';
+    } else {
+      document.title = `Página não encontrada | ${config.siteName}`;
+    }
+  }, [pageData]);
+
   const sectionHandlers = {
     GridContent: (section) => {
       return <GridContent key={section.sectionId} {...section} />;
